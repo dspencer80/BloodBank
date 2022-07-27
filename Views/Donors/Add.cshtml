@@ -1,0 +1,43 @@
+﻿@model BloodBank.Models.AddDonorViewModel
+@{
+}
+<h1>Add Donor</h1>
+<form method="post" action="Add">
+  <div class="mb-3">
+    <label for="" class="form-label">FirstName</label>
+    <input type="text" class="form-control" asp-for="FirstName">
+    </div>
+
+    <div class="mb-3">
+    <label for="" class="form-label">LastName</label>
+    <input type="text" class="form-control" asp-for="LastName">
+    </div>
+
+    <div class="mb-3">
+    <label for="" class="form-label">SSN</label>
+    <input type="number" class="form-control" asp-for="SSN">
+    </div>
+
+    <div class="mb-3">
+    <label for="" class="form-label">Email</label>
+    <input type="email" class="form-control" asp-for="Email">
+    </div>
+
+    <div class="mb-3">
+    <label for="" class="form-label">Race</label>
+    <input type="text" class="form-control" asp-for="Race">
+    </div>
+
+    <div class="mb-3">
+    <label for="" class="form-label">DateofBirth</label>
+    <input type="date" class="form-control" asp-for="DateofBirth">
+    </div>
+
+    <div class="mb-3">
+    <label for="" class="form-label">DonationDate</label>
+    <input type="date" class="form-control" asp-for="DonationDate">
+    </div>
+
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
