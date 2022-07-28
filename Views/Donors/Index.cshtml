@@ -1,0 +1,34 @@
+﻿@model List<BloodBank.Models.Domain.Donor>
+
+@{
+}
+
+<h1>Donors</h1>
+
+<table class="table">
+  <thead>
+      <tr>
+          <th>FirstName</th>
+          <th>LastName</th>
+          <th>Social</th>
+          <th>Email</th>
+          <th>Race</th>
+          <th>DateofBirth</th>
+          <th>DonationDate</th>
+      </tr>
+  </thead>
+  <tbody>
+        @foreach (var donor in Model)
+        {
+            <tr>
+                <td>@donor.FirstName</td>
+                <td>@donor.LastName</td>
+                <td>@donor.Social</td>
+                <td>@donor.Email</td>
+                <td>@donor.Race</td>
+                <td>@donor.DateofBirth.</td>
+                <td>@donor.DonationDate</td>
+            </tr>
+        }
+    </tbody>
+</table>

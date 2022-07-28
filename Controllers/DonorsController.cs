@@ -2,6 +2,7 @@
 using BloodBank.Models;
 using BloodBank.Models.Domain;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace BloodBank.Controllers
 {
@@ -12,6 +13,14 @@ namespace BloodBank.Controllers
         public DonorsController(BloodBankDbContext bloodBankDbContext)
         {
             this.bloodBankDbContext = bloodBankDbContext;
+        }
+
+        [HttpGet]
+
+        public async Task<IActionResult> Index()
+        {
+            var donors = await bloodBankDbContext.Donors.ToListAsync();
+            return View(donors);
         }
 
         [HttpGet]
@@ -28,7 +37,7 @@ namespace BloodBank.Controllers
                 Id = Guid.NewGuid(),
                 FirstName = addDonorRequest.FirstName,
                 LastName = addDonorRequest.LastName,
-                SSN = addDonorRequest.SSN,
+                Social = addDonorRequest.Social,
                 Email = addDonorRequest.Email,
                 Race = addDonorRequest.Race,
                 DateofBirth = addDonorRequest?.DateofBirth,
@@ -37,7 +46,7 @@ namespace BloodBank.Controllers
 
             await bloodBankDbContext.Donors.AddAsync(donor);
             await bloodBankDbContext.SaveChangesAsync();
-            return RedirectToAction("Add");
+            return RedirectToAction("Index");
 
         }
 
