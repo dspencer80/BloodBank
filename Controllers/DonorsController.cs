@@ -99,5 +99,22 @@ namespace BloodBank.Controllers
 
             return RedirectToAction("Index");
         }
+
+        [HttpPost]
+        public async  Task<IActionResult> Delete(UpdateDonorViewModel model)
+        {
+            var donor = await bloodBankDbContext.Donors.FindAsync(model.Id); 
+            
+            if(donor != null)
+            {
+                bloodBankDbContext.Donors.Remove(donor);
+                await bloodBankDbContext.SaveChangesAsync();
+
+                return RedirectToAction("Index");
+            }
+
+            return RedirectToAction("Index");
+
+        }
     }
 }

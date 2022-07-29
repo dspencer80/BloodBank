@@ -9,7 +9,7 @@
    
     <div class="mb-3">
     <label for="" class="form-label">Id</label>
-    <input type="text" class="form-control" asp-for="Id" readonly>
+    <input type="text" class="form-control" asp-for="Id" >
     </div>
 
     
@@ -49,5 +49,10 @@
     </div>
 
 
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary" asp-action="">Submit</button>
+
+  <button type="submit" class="btn btn-danger" 
+  asp-action=""
+  asp-controller="">Delete</button>
+
 </form>
