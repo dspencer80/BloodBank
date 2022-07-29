@@ -84,6 +84,7 @@ namespace BloodBank.Controllers
 
             if (donor != null)
             {
+                donor.Id = model.Id;
                 donor.FirstName = model.FirstName;
                 donor.LastName = model.LastName;
                 donor.Social = model.Social;    

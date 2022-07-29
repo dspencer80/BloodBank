@@ -8,6 +8,7 @@
 <table class="table">
   <thead>
       <tr>
+          <th>Id</th>
           <th>FirstName</th>
           <th>LastName</th>
           <th>Social</th>
@@ -21,6 +22,7 @@
         @foreach (var donor in Model)
         {
             <tr>
+                <td>@donor.Id</td>
                 <td>@donor.FirstName</td>
                 <td>@donor.LastName</td>
                 <td>@donor.Social</td>
@@ -28,7 +30,7 @@
                 <td>@donor.Race</td>
                 <td>@donor.DateofBirth?.ToString("dd-MM-yyyy")</td>
                 <td>@donor.DonationDate?.ToString("dd-MM-yyyy")</td>
-                <td><a href="Donors/View/@donor.FirstName">view</a></td>
+                <td><a href="Donors/View/@donor.Id">view</a></td>
             </tr>
         }
     </tbody>
