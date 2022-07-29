@@ -26,8 +26,8 @@
                 <td>@donor.Social</td>
                 <td>@donor.Email</td>
                 <td>@donor.Race</td>
-                <td>@donor.DateofBirth.</td>
-                <td>@donor.DonationDate</td>
+                <td>@donor.DateofBirth?.ToString("dd-MM-yyyy")</td>
+                <td>@donor.DonationDate?.ToString("dd-MM-yyyy")</td>
             </tr>
         }
     </tbody>
