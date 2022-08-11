@@ -1868,11 +1868,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\km4oo\\source\\repos\\BloodBank\\BloodBank\\BloodBank.csproj",
+      "projectUniqueName": "C:\\Users\\km4oo\\Desktop\\New folder\\BloodBank.csproj",
       "projectName": "BloodBank",
-      "projectPath": "C:\\Users\\km4oo\\source\\repos\\BloodBank\\BloodBank\\BloodBank.csproj",
+      "projectPath": "C:\\Users\\km4oo\\Desktop\\New folder\\BloodBank.csproj",
       "packagesPath": "C:\\Users\\km4oo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\km4oo\\source\\repos\\BloodBank\\BloodBank\\obj\\",
+      "outputPath": "C:\\Users\\km4oo\\Desktop\\New folder\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\km4oo\\AppData\\Roaming\\NuGet\\NuGet.Config",
